@@ -234,7 +234,7 @@ class _HomePageState extends State<HomePage>
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30))),
                   child: const Text(
-                    "Sign up",
+                    "Read more article",
                     style: TextStyle(
                         fontFamily: "roboto",
                         fontSize: 16,
