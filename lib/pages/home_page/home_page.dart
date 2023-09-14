@@ -217,7 +217,33 @@ class _HomePageState extends State<HomePage>
               const SizedBox(
                 height: 36,
               ),
-              TravelTips()
+              const TravelTips(),
+              const SizedBox(
+                height: 36,
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width - 32,
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () {
+                    setState(() {});
+                  },
+                  style: TextButton.styleFrom(
+                      elevation: 0,
+                      side: const BorderSide(color: Color(0xff7A61F4)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30))),
+                  child: const Text(
+                    "Read more article",
+                    style: TextStyle(
+                        fontFamily: "roboto",
+                        fontSize: 16,
+                        fontWeight: FontWeight.w300,
+                        fontStyle: FontStyle.italic,
+                        color: Color(0xff7A61F4)),
+                  ),
+                ),
+              )
             ],
           ),
         ),
