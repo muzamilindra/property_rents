@@ -13,11 +13,7 @@ class TravelTips extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-<<<<<<< HEAD
           "Travel tips for you", 
-=======
-          "Travel tips for you",
->>>>>>> c5278095e14091e429dd16ef20c0c57a43545c4b
           style: greyBoldTextStyle.copyWith(
               fontFamily: "roboto",
               fontSize: 18,
