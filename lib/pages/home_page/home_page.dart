@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:property_rents/general_widget/my_text_field.dart';
 import 'package:property_rents/general_widget/string_to_bool_converter.dart';
+import 'package:property_rents/general_widget/third_button.dart';
 import 'package:property_rents/pages/home_page/components/card_with_side_image.dart';
 import 'package:property_rents/pages/home_page/components/next_trip.dart';
 import 'package:property_rents/themes.dart';
@@ -221,29 +222,7 @@ class _HomePageState extends State<HomePage>
               const SizedBox(
                 height: 36,
               ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width - 32,
-                height: 50,
-                child: ElevatedButton(
-                  onPressed: () {
-                    setState(() {});
-                  },
-                  style: TextButton.styleFrom(
-                      elevation: 0,
-                      side: const BorderSide(color: Color(0xff7A61F4)),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30))),
-                  child: const Text(
-                    "Read more article",
-                    style: TextStyle(
-                        fontFamily: "roboto",
-                        fontSize: 16,
-                        fontWeight: FontWeight.w300,
-                        fontStyle: FontStyle.italic,
-                        color: Color(0xff7A61F4)),
-                  ),
-                ),
-              )
+              const ThirdButton(text:  "Read more article",)
             ],
           ),
         ),
