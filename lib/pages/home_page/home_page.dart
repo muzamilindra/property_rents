@@ -147,7 +147,6 @@ class _HomePageState extends State<HomePage>
                     children: [
                       Container(
                         height: 53,
-                        // color: Color(0xFFE3E3E7),
                         decoration: BoxDecoration(
                           border: Border.all(color: const Color(0xFFE3E3E7)),
                           borderRadius: BorderRadius.circular(72),
@@ -179,13 +178,11 @@ class _HomePageState extends State<HomePage>
                                       Color(0xFF6246EA),
                                     ]),
                                 borderRadius: BorderRadius.circular(72)),
-                            // labelColor: Colors.black,
                             labelColor: Colors.white,
                             labelStyle: whiteTextStyle.copyWith(
                                 fontFamily: 'roboto',
                                 fontSize: 15,
                                 fontWeight: FontWeight.w500),
-                            // indicatorColor: whiteColor,
                             unselectedLabelColor: greyBoldColor,
                             unselectedLabelStyle: greyBoldTextStyle.copyWith(
                                 fontFamily: 'roboto',
@@ -239,17 +236,12 @@ class _HomePageState extends State<HomePage>
         ),
       ),
       floatingActionButton: Container(
-        // color: Colors.amber.shade300,
         width: MediaQuery.of(context).size.width - 20,
         height: 70,
         decoration: BoxDecoration(
-          // borderRadius: BorderRadius.only(
-          //     topLeft: Radius.circular(30), topRight: Radius.circular(30)),
            borderRadius: BorderRadius.circular(50),
           color: Colors.white,
-          // color: Colors.amber.shade300,
         ),
-        // margin: EdgeInsets.symmetric(horizontal: 10),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
