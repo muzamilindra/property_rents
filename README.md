@@ -3,9 +3,9 @@
 A new Flutter project app, This project is the result of slicing from (https://tinyurl.com/propertyrent)
 
 ## Thank you
+@ Eric Angeloo
 
 ## Getting Started
-@ Eric Angeloo
 
 This project is a starting point for a Flutter application.
 
