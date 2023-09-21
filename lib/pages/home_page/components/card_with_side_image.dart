@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:property_rents/pages/home_page/components/item_card.dart';
+import 'package:property_rents/pages/property_details_page/property_details_page.dart';
+import 'package:property_rents/splash_page.dart';
 import '../../../themes.dart';
 
 class CardWithSideImage extends StatelessWidget {
@@ -13,10 +15,15 @@ class CardWithSideImage extends StatelessWidget {
       clipBehavior: Clip.none,
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: const [
-          ItemCard(
-              title: "Entire Bromo mountain view Cabin in Surabaya",
-              imgSource: "assets/images/hotel2.jpg"),
+        children: [
+          GestureDetector(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => PropertyDetailsPage()));
+            },
+            child: const ItemCard(
+                title: "Entire Bromo mountain view Cabin in Surabaya",
+                imgSource: "assets/images/hotel2.jpg"),
+          ),
           SizedBox(
             width: 20,
           ),
