@@ -24,13 +24,13 @@ class CardWithSideImage extends StatelessWidget {
                 title: "Entire Bromo mountain view Cabin in Surabaya",
                 imgSource: "assets/images/hotel2.jpg"),
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
-          ItemCard(
+          const ItemCard(
               title: "Entire Classic-modern House in Sidoarjo",
               imgSource: "assets/images/hotel3.jpg"),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
         ],
