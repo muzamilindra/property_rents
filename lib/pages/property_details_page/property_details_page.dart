@@ -95,9 +95,31 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                     .map((fileImage) {
                   if (getUrlType(fileImage.value) == 'video') {
                     return _controller.value.isInitialized
-                        ? AspectRatio(
-                            aspectRatio: _controller.value.aspectRatio,
-                            child: VideoPlayer(_controller),
+                        ? Stack(
+                            children: [
+                              VideoPlayer(_controller),
+                              Positioned(
+                                // height: 269,
+                                bottom: 110,
+                                right: MediaQuery.of(context).size.width * 0.45,
+                                child: IconButton(
+                                  onPressed: () {
+                                    setState(() {
+                                      _controller.value.isPlaying
+                                          ? _controller.pause()
+                                          : _controller.play();
+                                    });
+                                  },
+                                  icon: Icon(
+                                    _controller.value.isPlaying
+                                        ? Icons.pause_circle_outline_rounded
+                                        : Icons.play_circle_outline_rounded,
+                                    size: 50,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ],
                           )
                         : Container();
                   } else {
@@ -162,25 +184,6 @@ class _PropertyDetailsPageState extends State<PropertyDetailsPage> {
                           )),
                     ),
                   ],
-                ),
-              ),
-              Positioned(
-                // height: 269,
-                bottom: 110,
-                right: MediaQuery.of(context).size.width * 0.45,
-                child: IconButton(
-                  onPressed: () {
-                    setState(() {
-                      _controller.value.isPlaying
-                          ? _controller.pause()
-                          : _controller.play();
-                    });
-                  },
-                  icon: Icon(
-                    _controller.value.isPlaying
-                        ? Icons.pause_circle_outline_rounded
-                        : Icons.play_circle_outline_rounded, size: 50,color: Colors.white,
-                  ),
                 ),
               ),
               Positioned(
